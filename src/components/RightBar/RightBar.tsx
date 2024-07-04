@@ -1,5 +1,5 @@
 import React from 'react';
-import './RightBar.css'; // Импортируем файл стилей
+import './RightBar.css'; 
 
 const RightBar = () => {
   return (

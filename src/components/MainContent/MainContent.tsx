@@ -1,5 +1,5 @@
 import React from 'react';
-import './MainContent.css'; // Импортируем файл стилей
+import './MainContent.css'; 
 
 const MainContent = () => {
   return (
