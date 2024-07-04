@@ -1,19 +1,21 @@
 import React from 'react';
-import LeftBar from './components/LeftBar';
-import Column2 from './components/Column2';
-import Column3 from './components/Column3';
+import './App.css';
+import LeftBar from './components/LeftBar/LeftBar';
+import RightBar from './components/RightBar/RightBar';
+import MainContent from './components/MainContent/MainContent';
+
+
 
 
 
 function App() {
   return (
     <div className="App">
-      <div className="site">
-         <LeftBar />
-         <Column2 /> 
-         <Column3 /> 
-       </div>
-
+      <div className="container">
+        <LeftBar />
+        <MainContent />
+        <RightBar />
+      </div>
     </div>
   );
 }

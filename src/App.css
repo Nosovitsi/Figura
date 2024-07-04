@@ -37,4 +37,10 @@
   }
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 600px 1fr; /* Задайте нужные ширины для LeftBar, MainContent и RightBar */
+  grid-gap: 20px; /* Задайте нужный отступ между компонентами */
+}
+
 
