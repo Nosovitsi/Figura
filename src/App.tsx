@@ -2,7 +2,8 @@ import React from 'react';
 import Greeting from './components/Greeting';
 import Column1 from './components/Column1';
 import Column2 from './components/Column2';
-// import Column3 from './Column3';
+import Column3 from './components/Column3';
+
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <div className="site">
          <Column1 />
          <Column2 /> 
+         <Column3 /> 
        </div>
 
     </div>
