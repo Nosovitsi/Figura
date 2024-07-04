@@ -1,6 +1,5 @@
 import React from 'react';
-import Greeting from './components/Greeting';
-import Column1 from './components/Column1';
+import LeftBar from './components/LeftBar';
 import Column2 from './components/Column2';
 import Column3 from './components/Column3';
 
@@ -9,9 +8,8 @@ import Column3 from './components/Column3';
 function App() {
   return (
     <div className="App">
-      <Greeting />
       <div className="site">
-         <Column1 />
+         <LeftBar />
          <Column2 /> 
          <Column3 /> 
        </div>
