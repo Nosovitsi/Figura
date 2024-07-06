@@ -1,23 +1,15 @@
 import React from 'react';
+import Layout from './components/Layout';
 import './App.css';
-import LeftBar from './components/LeftBar/LeftBar';
-import RightBar from './components/RightBar/RightBar';
-import MainContent from './components/MainContent/MainContent';
 
-
-
-
-
-function App() {
-  return (
-    <div className="App">
-      <div className="container">
-        <LeftBar />
-        <MainContent />
-        <RightBar />
-      </div>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    return (
+        <div className="App">
+            <Layout />
+        </div>
+    );
+};
 
 export default App;
+
+

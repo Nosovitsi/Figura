@@ -1,0 +1,20 @@
+.appeal {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.appeal h2 {
+    color: #004d99;
+}
+.appeal table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.appeal table, .appeal th, .appeal td {
+    border: 1px solid #ccc;
+}
+.appeal th, .appeal td {
+    padding: 10px;
+    text-align: left;
+}
