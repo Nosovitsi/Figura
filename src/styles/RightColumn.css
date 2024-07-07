@@ -3,11 +3,11 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    width: 220px; /* Увеличим ширину для правой колонки */
+    width: 220px; 
     padding: 20px;
     background-color: #f8f9fa;
     border-left: 1px solid #dee2e6;
-    box-sizing: border-box; /* Убедимся, что padding входит в ширину элемента */
+    box-sizing: border-box; 
 }
 
 .right-column-content {
@@ -42,5 +42,14 @@
 .right-column .button:hover {
     background-color: #5a6268; 
 }
+
+
+@media (max-width: 768px) {
+    .right-column {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
 
 

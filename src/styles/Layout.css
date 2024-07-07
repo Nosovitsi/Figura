@@ -1,20 +1,3 @@
-/* .layout {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-.content {
-    display: flex;
-    flex-grow: 1;
-}
-
-.main-content {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-} */
-
 .layout {
     display: flex;
     flex-direction: column;
@@ -29,10 +12,27 @@
 
 .main-content {
     display: flex;
-    flex-grow: 3; 
+    flex-grow: 1;
     flex-direction: column;
     overflow: auto; 
 }
+
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .main-content {
+        order: 2;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        order: 1;
+    }
+}
+
 
 
 
