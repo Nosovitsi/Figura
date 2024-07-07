@@ -3,12 +3,12 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    width: 220px; 
+    width: 220px;
     padding: 20px;
     background-color: #f8f9fa;
     border-left: 1px solid #dee2e6;
-    box-sizing: border-box; 
-    overflow-y: auto; 
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
 .right-column-content {
@@ -25,15 +25,15 @@
     align-items: center;
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #6c757d; 
+    background-color: #6c757d;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s;
-    width: 100%; 
-    box-sizing: border-box; 
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .right-column .button .icon {
@@ -41,15 +41,15 @@
 }
 
 .right-column .button:hover {
-    background-color: #5a6268; 
+    background-color: #5a6268;
 }
 
 @media (max-width: 768px) {
     .right-column {
         width: 100%;
         padding: 10px;
-        height: auto; 
-        overflow-y: visible; 
+        height: auto;
+        overflow-y: visible;
     }
 }
 
