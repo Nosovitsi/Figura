@@ -22,14 +22,13 @@
 @media (max-width: 768px) {
     .content {
         flex-direction: column;
-        overflow-y: auto;
-        height: auto; 
+        height: auto; /* Автоматическая высота для мобильных устройств */
     }
 
     .main-content {
         order: 2;
         padding: 10px;
-        height: auto; 
+        height: auto; /* Автоматическая высота для мобильных устройств */
     }
 
     .left-column, .right-column {
@@ -40,6 +39,7 @@
         padding: 10px;
     }
 }
+
 
 
 
