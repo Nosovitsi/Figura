@@ -5,11 +5,14 @@ import './App.css';
 const App: React.FC = () => {
     return (
         <div className="App">
-            <Layout />
+            <div className="container">
+                <Layout />
+            </div>
         </div>
     );
 };
 
 export default App;
+
 
 

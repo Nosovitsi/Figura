@@ -1,14 +1,14 @@
 .layout {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     overflow: hidden; 
 }
 
 .content {
     display: flex;
     flex-grow: 1;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .main-content {
@@ -16,7 +16,10 @@
     flex-grow: 1;
     flex-direction: column;
     overflow-y: auto; 
+    padding: 20px; 
+    box-sizing: border-box; 
 }
+
 
 @media (max-width: 768px) {
     .content {
@@ -26,13 +29,19 @@
 
     .main-content {
         order: 2;
+        padding: 10px; 
     }
 
     .left-column, .right-column {
         width: 100%;
         order: 1;
+        height: auto; 
+        overflow-y: visible; 
+        padding: 10px; 
     }
 }
+
+
 
 
 
