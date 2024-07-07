@@ -3,10 +3,8 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0; 
+  overflow: hidden; 
+  background-color: #f0f0f0;
 }
 
 .App {
@@ -16,9 +14,11 @@ html, body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
   background-color: white; 
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   overflow: hidden; 
 }
+
+
 
 
 

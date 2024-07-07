@@ -8,6 +8,7 @@
     background-color: #f8f9fa;
     border-right: 1px solid #dee2e6;
     box-sizing: border-box; 
+    overflow-y: auto; 
 }
 
 .left-column-content {
@@ -78,13 +79,16 @@
     text-shadow: 0 0 5px rgba(90, 98, 104, 0.7); 
 }
 
-
 @media (max-width: 768px) {
     .left-column {
         width: 100%;
         padding: 10px;
+        height: auto; 
+        overflow-y: visible; 
     }
 }
+
+
 
 
 
