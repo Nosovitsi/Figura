@@ -15,7 +15,7 @@
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    overflow-y: auto;
+    overflow-y: auto; 
 }
 
 @media (max-width: 768px) {
@@ -33,6 +33,7 @@
         order: 1;
     }
 }
+
 
 
 

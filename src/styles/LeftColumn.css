@@ -79,6 +79,7 @@
     text-shadow: 0 0 5px rgba(90, 98, 104, 0.7); 
 }
 
+
 @media (max-width: 768px) {
     .left-column {
         width: 100%;
@@ -87,6 +88,7 @@
         overflow-y: visible; 
     }
 }
+
 
 
 

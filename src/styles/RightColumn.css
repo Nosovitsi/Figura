@@ -3,12 +3,12 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    width: 220px; /* Увеличим ширину для правой колонки */
+    width: 220px; 
     padding: 20px;
     background-color: #f8f9fa;
     border-left: 1px solid #dee2e6;
-    box-sizing: border-box; /* Убедимся, что padding входит в ширину элемента */
-    overflow-y: auto; /* Позволяем содержимому прокручиваться */
+    box-sizing: border-box; 
+    overflow-y: auto; 
 }
 
 .right-column-content {
@@ -25,7 +25,7 @@
     align-items: center;
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #6c757d; /* Более нейтральный цвет */
+    background-color: #6c757d; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -52,6 +52,7 @@
         overflow-y: visible; 
     }
 }
+
 
 
 
