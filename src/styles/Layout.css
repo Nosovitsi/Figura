@@ -1,14 +1,13 @@
 .layout {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    overflow: hidden;
+    height: 100vh; /* Высота на 100% окна браузера */
 }
 
 .content {
     display: flex;
     flex-grow: 1;
-    overflow: auto;
+    height: calc(100vh - 60px); /* Высота контента минус высота header */
 }
 
 .main-content {
@@ -24,11 +23,13 @@
     .content {
         flex-direction: column;
         overflow-y: auto;
+        height: auto; 
     }
 
     .main-content {
         order: 2;
         padding: 10px;
+        height: auto; 
     }
 
     .left-column, .right-column {
@@ -39,6 +40,8 @@
         padding: 10px;
     }
 }
+
+
 
 
 
