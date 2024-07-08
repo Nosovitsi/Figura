@@ -7,7 +7,7 @@
 .content {
     display: flex;
     flex-grow: 1;
-    overflow: hidden;
+    height: calc(100vh - 60px);
 }
 
 .main-content {
@@ -19,29 +19,16 @@
     box-sizing: border-box;
 }
 
-
-.main-content::-webkit-scrollbar {
-    width: 0;
-    background: transparent;
-}
-
 @media (max-width: 768px) {
-    .layout {
-        height: auto; 
-        overflow: visible;
-    }
-
     .content {
         flex-direction: column;
-        overflow: visible;
         height: auto;
     }
 
     .main-content {
         order: 2;
         padding: 10px;
-        height: auto; 
-        overflow-y: visible;
+        height: auto;
     }
 
     .left-column, .right-column {
@@ -53,29 +40,6 @@
     }
 }
 
-
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column;
-        height: auto; 
-        overflow: auto;
-    }
-
-    .main-content {
-        order: 2;
-        padding: 10px;
-        height: auto; 
-        overflow-y: auto;
-    }
-
-    .left-column, .right-column {
-        width: 100%;
-        order: 1;
-        height: auto;
-        overflow-y: visible;
-        padding: 10px;
-    }
-}
 
 
 
