@@ -1,13 +1,12 @@
 .layout {
     display: flex;
     flex-direction: column;
-    height: 100vh; 
+    height: 100vh;
 }
 
 .content {
     display: flex;
     flex-grow: 1;
-    height: calc(100vh - 60px); 
     overflow: hidden;
 }
 
@@ -22,8 +21,38 @@
 
 
 .main-content::-webkit-scrollbar {
-    display: none;
+    width: 0;
+    background: transparent;
 }
+
+@media (max-width: 768px) {
+    .layout {
+        height: auto; 
+        overflow: visible;
+    }
+
+    .content {
+        flex-direction: column;
+        overflow: visible;
+        height: auto;
+    }
+
+    .main-content {
+        order: 2;
+        padding: 10px;
+        height: auto; 
+        overflow-y: visible;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        order: 1;
+        height: auto;
+        overflow-y: visible;
+        padding: 10px;
+    }
+}
+
 
 @media (max-width: 768px) {
     .content {
