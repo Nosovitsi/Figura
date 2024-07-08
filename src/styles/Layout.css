@@ -1,13 +1,14 @@
 .layout {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Высота на 100% окна браузера */
+    height: 100vh; 
 }
 
 .content {
     display: flex;
     flex-grow: 1;
-    height: calc(100vh - 60px); /* Высота контента минус высота header */
+    height: calc(100vh - 60px); 
+    overflow: hidden;
 }
 
 .main-content {
@@ -19,16 +20,23 @@
     box-sizing: border-box;
 }
 
+
+.main-content::-webkit-scrollbar {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .content {
         flex-direction: column;
-        height: auto; /* Автоматическая высота для мобильных устройств */
+        height: auto; 
+        overflow: auto;
     }
 
     .main-content {
         order: 2;
         padding: 10px;
-        height: auto; /* Автоматическая высота для мобильных устройств */
+        height: auto; 
+        overflow-y: auto;
     }
 
     .left-column, .right-column {
@@ -39,6 +47,7 @@
         padding: 10px;
     }
 }
+
 
 
 
