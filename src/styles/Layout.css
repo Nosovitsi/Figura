@@ -1,14 +1,13 @@
 .layout {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100vh; /* Высота на 100% окна браузера */
 }
 
 .content {
     display: flex;
     flex-grow: 1;
     height: calc(100vh - 60px); /* Высота контента минус высота header */
-    overflow: hidden;
 }
 
 .main-content {
@@ -40,6 +39,7 @@
         padding: 10px;
     }
 }
+
 
 
 
