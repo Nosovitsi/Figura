@@ -7,7 +7,7 @@
 .content {
     display: flex;
     flex-grow: 1;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 60px); /* Высота контента минус высота header */
     overflow: hidden;
 }
 
@@ -23,15 +23,13 @@
 @media (max-width: 768px) {
     .content {
         flex-direction: column;
-        height: auto;
-        overflow: auto;
+        height: auto; 
     }
 
     .main-content {
         order: 2;
         padding: 10px;
-        height: auto;
-        overflow-y: auto;
+        height: auto; 
     }
 
     .left-column, .right-column {
@@ -42,6 +40,7 @@
         padding: 10px;
     }
 }
+
 
 
 
