@@ -4,7 +4,7 @@ import Sidebar from './Sidebar';
 import LeftColumn from './LeftColumn';
 import RightColumn from './RightColumn';
 import MainContent from './MainContent';
-import Appeal from './Appeal'; 
+import Appeal from './Appeal';
 import '../styles/Layout.css';
 
 const Layout: React.FC = () => {
@@ -24,6 +24,8 @@ const Layout: React.FC = () => {
 };
 
 export default Layout;
+
+
 
 
 
