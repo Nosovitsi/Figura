@@ -7,7 +7,7 @@
 .content {
     display: flex;
     flex-grow: 1;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 60px); /* Высота контента минус высота header */
 }
 
 .main-content {
@@ -17,19 +17,18 @@
     overflow-y: auto;
     padding: 20px;
     box-sizing: border-box;
-    -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: 768px) {
     .content {
         flex-direction: column;
-        height: auto;
+        height: auto; /* Автоматическая высота для мобильных устройств */
     }
 
     .main-content {
         order: 2;
         padding: 10px;
-        height: auto;
+        height: auto; /* Автоматическая высота для мобильных устройств */
     }
 
     .left-column, .right-column {
@@ -40,6 +39,7 @@
         padding: 10px;
     }
 }
+
 
 
 
