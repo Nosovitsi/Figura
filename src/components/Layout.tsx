@@ -15,6 +15,7 @@ const Layout: React.FC = () => {
                 <LeftColumn />
                 <Sidebar />
                 <MainContent>
+                {/* <RouterProvider router={router}/> */}
                     <Appeal />
                 </MainContent>
                 <RightColumn />
