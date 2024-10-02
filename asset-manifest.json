@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Figura/static/css/main.2302b353.css",
+    "main.css": "/Figura/static/css/main.b439955b.css",
     "main.js": "/Figura/static/js/main.118058f4.js",
     "static/media/header-logo.svg": "/Figura/static/media/header-logo.0a1f9d867c29e88df01e2996b50877fc.svg",
     "index.html": "/Figura/index.html",
-    "main.2302b353.css.map": "/Figura/static/css/main.2302b353.css.map",
+    "main.b439955b.css.map": "/Figura/static/css/main.b439955b.css.map",
     "main.118058f4.js.map": "/Figura/static/js/main.118058f4.js.map"
   },
   "entrypoints": [
-    "static/css/main.2302b353.css",
+    "static/css/main.b439955b.css",
     "static/js/main.118058f4.js"
   ]
 }
