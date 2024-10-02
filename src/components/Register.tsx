@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Register.css';
 
 const Register: React.FC = () => {
@@ -12,6 +13,8 @@ const Register: React.FC = () => {
     email: '',
     password: ''
   });
+
+  const navigate = useNavigate(); // Хук для навигации
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -43,7 +46,7 @@ const Register: React.FC = () => {
     e.preventDefault();
     if (validateForm()) {
       alert('Регистрация успешна');
-    
+      navigate('/'); // Перенаправление на главную страницу после успешной регистрации
     }
   };
 
@@ -97,4 +100,5 @@ const Register: React.FC = () => {
 };
 
 export default Register;
+
 

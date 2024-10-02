@@ -1,31 +1,48 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { createHashRouter, RouterProvider } from 'react-router-dom';
-import './index.css';
-import App from './App';
-import AdminPanel from './components/AdminPanel';
-import Register from './components/Register';
+import React, { useState } from "react";
+import { createHashRouter, RouterProvider, Navigate } from "react-router-dom";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import AdminPanel from "./components/AdminPanel";
+import Register from "./components/Register";
+import Login from "./components/Login";
 
-const router = createHashRouter([
-    {
-        path: "/",
-        element: <App />,
-    },
-    {
-        path: "/admin",
-        element: <AdminPanel />,
-    },
-    {
-        path: "/register",
-        element: <Register />,
-    },
-]);
+const Index = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
-        <RouterProvider router={router} />
-    </React.StrictMode>
+  const router = createHashRouter([
+    {
+      path: "/",
+      element: (
+        isAuthenticated ? <App onAuthenticate={() => setIsAuthenticated(true)} /> : <Navigate to="/login" replace />
+      ),
+    },
+    {
+      path: "/admin",
+      element: <AdminPanel />,
+    },
+    {
+      path: "/register",
+      element: <Register />,
+    },
+    {
+      path: "/login",
+      element: <Login onLogin={() => setIsAuthenticated(true)} />,
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
+};
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <Index />
+  </React.StrictMode>
 );
+
+
+
+
+
 
 
 
