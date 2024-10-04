@@ -21,9 +21,9 @@ const LeftColumn: React.FC = () => {
         <div className="left-column">
             <div className="left-column-content">
                 <h2>Меню</h2>
-                <button className="button" onClick={toggleProfileSettingsModal}>
+                {/* <button className="button" onClick={toggleProfileSettingsModal}>
                     <FontAwesomeIcon icon={faCog} className="icon" /> Настройки профиля
-                </button>
+                </button> */}
                 <button className="button" onClick={toggleEquipmentModal}>
                     <FontAwesomeIcon icon={faList} className="icon" /> Список оборудования
                 </button>

@@ -10,8 +10,8 @@ const Header: React.FC = () => {
                 <img src={logo} alt="Logo" className="header-logo" />
             </div>
             <nav>
-                <Link to="/register" className="header-link">Регистрация</Link>
-                <Link to="/admin" className="header-link">Личный кабинет</Link>
+                {/* <Link to="/register" className="header-link">Регистрация</Link>
+                <Link to="/admin" className="header-link">Личный кабинет</Link> */}
             </nav>
         </header>
     );

@@ -13,7 +13,7 @@ const Layout: React.FC = () => {
             <Header />
             <div className="content">
                 <LeftColumn />
-                <Sidebar />
+                {/* <Sidebar /> */}
                 <MainContent>
                 {/* <RouterProvider router={router}/> */}
                     <Appeal />
