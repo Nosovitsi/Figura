@@ -1,20 +1,82 @@
-.appeal {
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.appeals-container {
+  padding: 5px;
+  font-size: 12px;
 }
-.appeal h2 {
-    color: #004d99;
+
+.column-toggle {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 12px;
 }
-.appeal table {
-    width: 100%;
-    border-collapse: collapse;
+
+.toggle-label {
+  margin-right: 10px;
+  font-weight: bold;
 }
-.appeal table, .appeal th, .appeal td {
-    border: 1px solid #ccc;
+
+.toggle-item {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
 }
-.appeal th, .appeal td {
+
+.toggle-item input {
+  margin-right: 3px;
+}
+
+.toggle-text {
+  white-space: nowrap;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.appeals-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.appeals-table th, .appeals-table td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  text-align: left;
+}
+
+.appeals-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.appeals-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.appeals-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+  .appeals-container {
     padding: 10px;
-    text-align: left;
+  }
+
+  .column-toggle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toggle-label {
+    margin-bottom: 5px;
+  }
+
+  .toggle-item {
+    margin-bottom: 3px;
+  }
 }

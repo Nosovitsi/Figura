@@ -1,19 +1,33 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Layout from "./components/Layout";
-// import Login from "./components/Login";
 
 const App: React.FC<{ onAuthenticate: () => void }> = ({ onAuthenticate }) => {
   const [socket, setSocket] = useState<WebSocket | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+  const form = {
+    "action": "registration",
+    "user_name": "example@gmail.com",
+    "password": "topsecret",
+    "company_name": "ООО ХЛЕБ И ПИВО",
+    "INN": "12345",
+    "KPP": "12345",
+    "address": "Москва, улица Красных Фонарей",
+    "contact_user_name": "Александр",
+    "contact_user_surname": "Конь",
+    "phone_number":"+74955553535",
+    "admin_keyword": "Effective_420"
+  };
+
+  const stringedForm = JSON.stringify(form);
 
   useEffect(() => {
     const newSocket = new WebSocket('ws://185.130.47.110:8686');
     setSocket(newSocket);
+    window.ws = newSocket;
   
     return () => {
-      console.log("Закрытие соединения WebSocket");
-
+      // Cleanup function if needed
     };
   }, []);
 
@@ -22,6 +36,8 @@ const App: React.FC<{ onAuthenticate: () => void }> = ({ onAuthenticate }) => {
 
     socket.onopen = () => {
       console.log("Соединение WebSocket открыто");
+      // socket.send(stringedForm);
+      // window.ws.send(stringedForm);
     };
 
     socket.onmessage = (event: MessageEvent) => {
@@ -44,9 +60,7 @@ const App: React.FC<{ onAuthenticate: () => void }> = ({ onAuthenticate }) => {
 
   return (
     <div className="App">
-
         <Layout />
-
     </div>
   );
 };

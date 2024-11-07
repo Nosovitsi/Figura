@@ -15,7 +15,7 @@
     padding: 30px;
     width: 500px;
     max-width: 90%;
-    text-align: center;
+    /* text-align: center; */
 }
 
 h1, h2, h3 {
@@ -28,6 +28,7 @@ ul {
 }
 
 li {
+    font-size: 13px;
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
