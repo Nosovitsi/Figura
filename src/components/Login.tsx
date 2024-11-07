@@ -17,15 +17,14 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
   // Слушаем ответ от сервера
   useEffect(() => {
     const handleServerResponse = (event: MessageEvent) => {
-      const serverResponse = event.data; // Получаем данные от сервера как строку
-
+      const serverResponse = JSON.parse(event.data); // Получаем данные от сервера как строку
       // Проверяем ответ от сервера
-      if (serverResponse === "200") {
+      if (serverResponse.status === "200") {
         setSuccess("Вход успешен");
         setError("");
         onLogin();
-        navigate("/"); // Перенаправляем пользователя на главную страницу
-      } else if (serverResponse === "403") {
+        navigate("/",{state: {userId:serverResponse.client_id}}); // Перенаправляем пользователя на главную страницу
+      } else if (serverResponse.status === "403") {
         setError("Пользователь не существует");
         setSuccess("");
       }

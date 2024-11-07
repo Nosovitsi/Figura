@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import '../styles/RightColumn.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding, faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import Modal from './Modal'; // Импортируйте компонент Modal
+import Modal from './Modal';
+import {useLocation} from "react-router-dom"; // Импортируйте компонент Modal
 
 interface CompanyInfo {
   company_name: string;
@@ -16,12 +17,13 @@ const RightColumn: React.FC = () => {
   const [companyInfo, setCompanyInfo] = useState<CompanyInfo | null>(null);
 
   const userName = 'test'; // Замените на реальное имя пользователя из login.tsx
+  const location = useLocation();
 
   useEffect(() => {
     const fetchCompanyInfo = () => {
       const requestData = {
         action: 'GET_COMPANY_INFO',
-        user_name: userName
+        user_name: location.state.userId
       };
       const jsonString = JSON.stringify(requestData);
 
