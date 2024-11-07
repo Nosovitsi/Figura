@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect, useCallback} from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/PasswordManage.css";
 import Modal from "./Modal";
@@ -15,7 +15,7 @@ const PasswordManage: React.FC = () => {
   const [nameNewDeal, setNameNewDeal] = useState<string>("");
   const navigate = useNavigate();
 
-  const sendManageRequest = (savedPassword?: string) => {
+  const sendManageRequest = useCallback ((savedPassword?: string) => {
     const passwordData = {
       action: "LOG_MANAGE",
       password: savedPassword || password,
@@ -36,7 +36,7 @@ const PasswordManage: React.FC = () => {
       setError("Ошибка соединения с сервером");
       setUsers([]);
     }
-  };
+  },[]);
 
   useEffect(() => {
     const savedAuth = sessionStorage.getItem("isAuthenticated");

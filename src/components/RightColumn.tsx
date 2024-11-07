@@ -37,6 +37,7 @@ const RightColumn: React.FC = () => {
     const handleMessage = (event: MessageEvent) => {
       try {
         const data = JSON.parse(event.data);
+        console.log(`kek`,data)
         if (data.company_name) {
           setCompanyInfo({
             company_name: data.company_name,
@@ -59,7 +60,7 @@ const RightColumn: React.FC = () => {
     return () => {
       window.ws.removeEventListener('message', handleMessage);
     };
-  }, [isModalOpen, userName]);
+  }, [isModalOpen, userName,location.state]);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -76,31 +77,38 @@ const RightColumn: React.FC = () => {
       <Modal show={isModalOpen} onClose={toggleModal}>
         <h2>Информация о компании</h2>
         {companyInfo ? (
-          <div className="company-info">
-            <div className="info-section">
-              <FontAwesomeIcon icon={faMapMarkerAlt} className="info-icon" />
-              <div>
-                <h3>Адрес</h3>
-                <p>{companyInfo.address}</p>
+            <div className="company-info">
+              <div className="info-section">
+                <FontAwesomeIcon icon={faMapMarkerAlt} className="info-icon"/>
+                <div>
+                  <h3>Имя компании</h3>
+                  <p>{companyInfo.company_name}</p>
+                </div>
+              </div>
+              <div className="info-section">
+                <FontAwesomeIcon icon={faMapMarkerAlt} className="info-icon"/>
+                <div>
+                  <h3>Адрес</h3>
+                  <p>{companyInfo.address}</p>
+                </div>
+              </div>
+              <div className="info-section">
+                <FontAwesomeIcon icon={faPhone} className="info-icon"/>
+                <div>
+                  <h3>Телефон</h3>
+                  <p>{companyInfo.phone}</p>
+                </div>
+              </div>
+              <div className="info-section">
+                <FontAwesomeIcon icon={faEnvelope} className="info-icon"/>
+                <div>
+                  <h3>Email</h3>
+                  <p>{companyInfo.email}</p>
+                </div>
               </div>
             </div>
-            <div className="info-section">
-              <FontAwesomeIcon icon={faPhone} className="info-icon" />
-              <div>
-                <h3>Телефон</h3>
-                <p>{companyInfo.phone}</p>
-              </div>
-            </div>
-            <div className="info-section">
-              <FontAwesomeIcon icon={faEnvelope} className="info-icon" />
-              <div>
-                <h3>Email</h3>
-                <p>{companyInfo.email}</p>
-              </div>
-            </div>
-          </div>
         ) : (
-          <p>Загрузка информации...</p>
+            <p>Загрузка информации...</p>
         )}
       </Modal>
     </div>
