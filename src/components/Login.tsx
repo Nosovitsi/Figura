@@ -17,15 +17,16 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
   // Слушаем ответ от сервера
   useEffect(() => {
     const handleServerResponse = (event: MessageEvent) => {
-      const serverResponse = event.data; // Получаем данные от сервера как строку
-
+      const serverResponse = JSON.parse(event.data); // Получаем данные от сервера как строку
       // Проверяем ответ от сервера
-      if (serverResponse === "200") {
+      if (serverResponse.status === "200") {
         setSuccess("Вход успешен");
         setError("");
+        // Сохраняем имя пользователя
+        sessionStorage.setItem("userName", username);
         onLogin();
-        navigate("/"); // Перенаправляем пользователя на главную страницу
-      } else if (serverResponse === "403") {
+        navigate("/",{state: {userId:serverResponse.client_id}}); // Перенаправляем пользователя на главную страницу
+      } else if (serverResponse.status === "403") {
         setError("Пользователь не существует");
         setSuccess("");
       }
@@ -41,7 +42,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
         window.ws.removeEventListener('message', handleServerResponse);
       }
     };
-  }, [onLogin, navigate]);
+  }, [onLogin, navigate, username]); // Добавили username в зависимости
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -100,7 +101,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
         {error && <p className="error-message">{error}</p>}
         {success && <p className="success-message">{success}</p>}
 
-        <button type="submit">Войти</button>
+        <button type="submit" className="login-btn">Войти</button>
       </form>
     </div>
   );
