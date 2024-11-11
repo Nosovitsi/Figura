@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-import { Organization } from "./types"; // Импорт типов, если они у вас есть
+import '../styles/OrganizationModal.css'
 
 interface OrganizationModalProps {
-  organizations: Organization[];
+  organizations: Array<string[]>;
   onClose: () => void;
 }
 
@@ -15,16 +15,24 @@ const OrganizationModal: FC<OrganizationModalProps> = ({ organizations, onClose 
           <button onClick={onClose} className="close-button">×</button>
         </div>
         <div className="modal-body">
+          <span>Введите серийный номер:</span>
+          <input type="text"/>
           {organizations.length > 0 ? (
             <ul className="organization-list">
               {organizations.map((org) => (
-                <li key={org.id} className="organization-item">
-                  <span>{org.name}</span>
-                </li>
+                  <li key={org[3]} className="organization-item">
+                    <div className="organization-list-data">
+                      <div><span>Оборудование: </span><span>{org[1]}</span></div>
+                      <div><span>Серийный номер: </span><span>{org[2]}</span></div>
+                      <span>{org[0]}</span>
+
+                      </div>
+
+                  </li>
               ))}
             </ul>
           ) : (
-            <p>Нет доступного оборудования</p>
+              <p>Нет доступного оборудования</p>
           )}
         </div>
       </div>

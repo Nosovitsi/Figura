@@ -18,9 +18,9 @@ const Appeals: React.FC = () => {
   const [appeals, setAppeals] = useState<Appeal[]>([]);
   const [columnVisibility, setColumnVisibility] = useState<ColumnVisibility>({
     "Номер обращения": true,
-    Дата: true,
+    "Дата": true,
     "Описание проблемы": true,
-    Адрес: true,
+    "Адрес": true,
     "Прикрепленные файлы": true,
     "Серийный номер": true,
     "Номер продукта": true,
@@ -28,10 +28,10 @@ const Appeals: React.FC = () => {
     "№ договора тех поддержки": true,
     "Дата начала ТП": true,
     "Дата окончания ТП": true,
-    Критичность: true,
-    Статус: true,
+    "Критичность": true,
+    "Статус": true,
     "Дата закрытия": true,
-    Сотрудник: true,
+    "Сотрудник": true,
     "E-mail сотрудника": true,
   });
   const location = useLocation();

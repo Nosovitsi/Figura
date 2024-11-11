@@ -1,4 +1,4 @@
-/* OrganizationModal.css */
+/* RequestModal.css */
 .modal {
     position: fixed;
     top: 0;
@@ -46,12 +46,18 @@
   .modal-body {
     overflow-y: auto;
     max-height: 60vh;
+    height: 60vh;
   }
   
   .organizations-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+  .organization-list-data{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
   
   .organization-item {

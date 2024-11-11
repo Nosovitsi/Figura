@@ -26,14 +26,18 @@
     margin-bottom: 10px;
     padding: 10px;
     background-color: #6c757d;
+    border-color: #6c757d;
     color: white;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 12px;
     transition: background-color 0.3s;
     width: 100%;
     box-sizing: border-box;
+}
+.btn-active{
+    background-color: #2196F3!important;
+
 }
 
 .left-column .button .icon {
