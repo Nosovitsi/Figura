@@ -130,7 +130,7 @@ const PasswordManage: React.FC = () => {
   };
 
   const handleUserClick = (userName: string) => {
-      const requestData = {
+    const requestData = {
       action: "SHOW_DEALS",
       user_name: userName,
     };
@@ -225,6 +225,7 @@ const PasswordManage: React.FC = () => {
           <div className="manage-header">
             <h2>Панель управления</h2>
           </div>
+
           {!isAuthenticated ? (
             <form onSubmit={handleSubmit} className="password-form">
               <div className="form-group">
@@ -245,11 +246,13 @@ const PasswordManage: React.FC = () => {
             </form>
           ) : (
             <>
+
             <div className="logout-container">
               <button onClick={handleLogout} className="logout-button">
                 Выйти
               </button>
             </div>
+
               {error && <div className="error-message">{error}</div>}
               {users.length > 0 && (
                 <div className="user-list">
@@ -259,7 +262,8 @@ const PasswordManage: React.FC = () => {
                       <li key={index} className="user-item">
                         <span>{user.name}</span>
                         {user.deals.length === 0 ? (
-                          <button onClick={() => handleUserClick(user.name)} className="deal-button">
+
+                          <button onClick={() => handleUserClick(user.name)}>
                             Получить договоры
                           </button>
                         ) : (

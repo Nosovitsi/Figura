@@ -175,4 +175,3 @@ const Appeals: React.FC = () => {
 };
 
 export default Appeals;
-

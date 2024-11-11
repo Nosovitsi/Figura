@@ -15,6 +15,11 @@
     align-items: center;
     z-index: 1000;
 }
+.modal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 .modal-content {
     background-color: #fff;
